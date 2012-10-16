@@ -24,6 +24,26 @@ public class DBMember : DBBasic
         return MyDatabaseManager().GetDataTableBySqlCommand (strSQL);
 
     }
+
+   public String login(String txtEmail, String txtPassword)
+   {
+       String strSQL;
+       DataTable userData;
+       String userType;
+
+       strSQL = "SELECT UserType FROM user WHERE UserEmail = '" + txtEmail + "' and UserPassword = '" + txtPassword + "'";
+       userData = MyDatabaseManager().GetDataTableBySqlCommand(strSQL);
+       if (userData.Rows.Count == 1)
+       {
+           userType = (String)userData.Rows[0].ItemArray[0];
+           return userType;
+       }
+       return "";
+
+
+       // strSQL = "SELECT email, password FROM user where email = '" + txtEmail + "' and password = '" + txtPassword + "'";
+       //MyDatabaseManager().ExecuteNonQuery(strSQL);
+   }
 }
 
 
