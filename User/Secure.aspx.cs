@@ -9,9 +9,11 @@ public partial class Secure : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["New"] != null)
+        HUser user = HUser.getLoginUser(Session);
+
+        if (user != null)
         {
-            Label1.Text += Session["New"].ToString();
+            Label1.Text += user.Name;
 
         }
         else {

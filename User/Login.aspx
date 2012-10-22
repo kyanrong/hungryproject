@@ -31,24 +31,26 @@
         <table class="style1">
             <tr>
                 <td class="style2" style="font-size: medium">
-                    UserEmail</td>
+                    Email</td>
                 <td class="style3">
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtUserEmail" runat="server"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                        ErrorMessage="You must enter the useremail...!!" style="font-size: medium"></asp:RequiredFieldValidator>
+                        ErrorMessage="Email is blank." style="font-size: medium" 
+                        ControlToValidate="txtUserEmail"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="style2">
-                    PassWord</td>
+                    Password</td>
                 <td class="style3">
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                        ErrorMessage="You must enter the password...!!" style="font-size: medium"></asp:RequiredFieldValidator>
+                        ErrorMessage="Password is blank." style="font-size: medium" 
+                        ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>

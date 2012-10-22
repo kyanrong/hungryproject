@@ -226,7 +226,7 @@ public class DatabaseManager
         return intResult;
     }
 
-    public bool HasColumn(DataTable MyDataTable, String pColumnName) {
+   static public bool HasColumn(DataTable MyDataTable, String pColumnName) {
 
 
         
