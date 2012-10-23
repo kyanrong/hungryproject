@@ -34,6 +34,12 @@ public class DatabaseManager
         pTransactionStatus = TransactionStatus.BEGINTRANSACTION;
     }
 
+    public MySqlCommand getNewCommand() {
+       return pSqlConnection.CreateCommand();
+    }
+
+    
+
 
     public void CommitTransaction()
     {
